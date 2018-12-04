@@ -5,7 +5,7 @@ library(completejourney)
 
 #Data Tranformation Solutions
 
-#change transactions, household, week, and time variables and removed week
+#change transactions, household, week, and time variables and removed day variable
 
 transactions <- transactions %>% 
   select(
@@ -29,6 +29,6 @@ transactions <- transactions %>% mutate(
 
 transactions
 
-#Done
+#solved
 
 
