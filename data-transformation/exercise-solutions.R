@@ -31,4 +31,14 @@ transactions
 
 #solved
 
+# Question 2: Create three new variables named `regular_price`, `loyalty_price`, and `coupon_price` according to the following logic:
+  
+# logic is that regular_price = (sales_value + retail_disc + coupon_match_disc) / quantity,
+#loyalty_price = (sales_value + coupon_match_disc) / quantity
+#coupon_price  = (sales_value - coupon_disc) / quantity
 
+transactions <- transactions %>% mutate(regular_price = (sales_value + retail_disc + coupon_match_disc) / quantity, loyalty_price = (sales_value + coupon_match_disc) / quantity, coupon_price  = (sales_value - coupon_disc) / quantity)
+
+transactions
+
+#solved
