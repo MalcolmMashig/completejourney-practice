@@ -42,3 +42,19 @@ transactions <- transactions %>% mutate(regular_price = (sales_value + retail_di
 transactions
 
 #solved
+
+# Question 3`transactions` includes 92,339 unique product IDs. How many of these products (not transactions!) had a regular price of one dollar or less? What does this count equal for loyalty and coupon prices?
+
+transactions %>% filter(regular_price <= 1) %>% select(product_id) %>% n_distinct()
+
+transactions %>% 
+  filter(loyalty_price <= 1) %>% 
+  select(product_id) %>% 
+  n_distinct()
+
+transactions %>% 
+  filter(coupon_price <= 1) %>% 
+  select(product_id) %>% 
+  n_distinct()
+
+#solved
